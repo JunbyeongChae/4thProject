@@ -7,6 +7,7 @@
 - 사용자의 건강 상태를 체계적으로 관리할 수 있도록 돕는 웹 애플리케이션 개발.
 - 체중, 운동, 식단, 복약 등의 기록을 통해 건강 습관을 개선할 수 있도록 지원.
 - 간편한 UI/UX를 제공하여 지속적으로 사용할 수 있는 플랫폼 구축.
+- 영양사의 정보제공 및 상담 컨텐츠로 전문적 프로그램 개발.
 
 ### 1.2 업무분장
 
@@ -14,19 +15,20 @@
 
   - React 기반 UI 개발.
   - 사용자 경험(UX) 개선.
-  - API 연동 및 데이터 시각화(체중 변화, 운동 기록 등).
+  - **API 연동 및 데이터 시각화(체중 변화, 운동 기록 등).**
   - 라이브러리 및 상태 관리 (Redux, React Query 등) 적용.
 
 - **백엔드**
 
   - Spring Boot 기반 RESTful API 개발.
   - 회원 관리, 운동 및 식단 기록 저장 및 제공.
-  - Firebase 또는 RDBMS를 활용한 데이터 관리.
+  - Firebase 활용한 데이터 관리.
   - API 인증 및 보안 적용 (JWT, OAuth 등).
+  - 공공 데이터 활용한 정보 제공.
 
 - **PM(문서화, 채팅방 관리 등.) 및 그 외**
   - 프로젝트 일정 관리 및 문서화 (API 문서, 회의록 포함).
-  - 커뮤니케이션 툴 관리 (Slack, Notion 등).
+  - 커뮤니케이션 툴 관리 (Slack, Git 등).
   - 테스트 및 유지보수 계획 수립.
 
 ## 2. 주요 기능
@@ -40,11 +42,11 @@
   - 회원 정보 암호화 및 보안 처리.
 
 - **기술 스택:**
-  - 프론트엔드: React
-  - 백엔드: Spring Boot
-  - API: Google 소셜 로그인 API
-  - DB: Firebase
-  - 기타: GitHub, Slack
+  - 프론트엔드 : React
+  - 백엔드 : Spring Boot
+  - API : Google 소셜 로그인 API
+  - DB : Firebase
+  - 기타 : GitHub, Slack
 
 ### 2.2 건강정보 제공
 
@@ -52,12 +54,12 @@
 
   - 건강 관련 정보 제공 (운동 가이드, 영양 정보, 건강 관리 팁 등).
   - 사용자가 게시글을 검색하고 열람할 수 있도록 게시판 형태로 구성.
+  - 작성자는 관리자 권한으로 설정.
 
 - **기술 스택:**
-  - 프론트엔드: React
+  - 프론트엔드 : React
   - 백엔드: Spring Boot
-  - API: 건강 관련 공공 데이터 API 활용
-  - DB: Firebase
+  - DB : Firebase
 
 ### 2.3 운동 스케줄 관리
 
@@ -71,8 +73,7 @@
 - **기술 스택:**
   - 프론트엔드: React
   - 백엔드: Spring Boot
-  - API: Wger Workout API (무료 운동 데이터 API 활용 가능)
-  - DB: Firebase 또는 Oracle11
+  - DB : Firebase, 한국건강증진개발원DB
 
 ### 2.4 식단 관리
 
@@ -83,10 +84,9 @@
   - 일별 섭취 칼로리 및 영양소 분석 기능.
 
 - **기술 스택:**
-  - 프론트엔드: React
-  - 백엔드: Spring Boot
-  - API: 한국식약처 음식 영양정보 API, Nutritionix API
-  - DB: Firebase 또는 Oracle11
+  - 프론트엔드 : React
+  - 백엔드 : Spring Boot
+  - DB : Firebase, 전국통합식품영양성분정보*음식*표준데이터
 
 ### 2.5 개인정보 및 건강 상태 관리
 
@@ -99,23 +99,19 @@
 - **기술 스택:**
   - 프론트엔드: React
   - 백엔드: Spring Boot
-  - API: Google Fit API, Apple HealthKit API (선택 사항)
-  - DB: Firebase 또는 Oracle11
+  - DB : Firebase
 
 ### 2.6 영양 상담 게시판
 
 - **기능 설명:**
 
   - 사용자가 영양 및 식단 관련 질문을 올릴 수 있는 게시판 기능.
-  - 전문가 또는 다른 사용자들이 답변을 달 수 있도록 댓글 기능 제공.
-  - 인기 질문 및 답변 정리 기능 추가.
-  - 키워드 검색을 통한 영양 정보 조회 가능.
+  - 전문관리자가가 답변을 달 수 있도록 댓글 기능 제공.
 
 - **기술 스택:**
-  - 프론트엔드: React
-  - 백엔드: Spring Boot
-  - API: 건강 및 영양 관련 공공 데이터 API 활용 가능
-  - DB: Firebase 또는 Oracle11
+  - 프론트엔드 : React
+  - 백엔드 : Spring Boot
+  - DB : Firebase
 
 ## 3. 추가 고려 기능
 
